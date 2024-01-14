@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 const axiosInstance = axios.create({
-    baseURL:  'https://jsonplaceholder.typicode.com/'
+    baseURL:  'http://[::1]:3000/',
 });
 
 export const useAxios = (url, method, body = null, headers = null) => {
+    console.log(url, method, body, headers)
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -17,9 +18,11 @@ export const useAxios = (url, method, body = null, headers = null) => {
                 data: body,
                 headers: headers
             });
+            console.log('ssss',res.data)
             setResponse(res.data);
             setIsLoading(false);
         } catch (error) {
+            console.log('error')
             setError(error);
         }
     };

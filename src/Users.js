@@ -3,7 +3,7 @@ import User from './User';
 import { useAxios } from './useAxios';
 
 function Users() {
-    const url = 'users';
+    const url = 'task';
     const method = 'get';
 
     const { response, error, isLoading } = useAxios(url, method);

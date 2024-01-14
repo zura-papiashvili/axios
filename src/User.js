@@ -9,13 +9,13 @@ const User = ({ userItem }) => {
     error: deleteError,
     isLoading: deleteLoading,
     request: deleteRequest,
-  } = useAxios("users/" + userItem.id, "delete");
+  } = useAxios("cars/" + userItem._id, "delete");
   const {
     response: updateResponse,
     error: updateError,
     isLoading: updateLoading,
     request: updateRequest,
-  } = useAxios("users/" + userItem.id, "put");
+  } = useAxios("cars/" + userItem.id, "put");
 
   const deleteUser = async () => {
     try {
@@ -37,7 +37,7 @@ const User = ({ userItem }) => {
   };
 
   return (
-    <div key={userItem.id} className="card">
+    <div key={userItem._id} className="card">
       {isEditing ? (
         <>
           <input
@@ -56,6 +56,7 @@ const User = ({ userItem }) => {
       ) : (
         <>
           <h3>Name: {userItem.name}</h3>
+          <p>ID: {userItem._id}</p>
           <p>Username: {userItem.username}</p>
           <p>Email: {userItem.email}</p>
           <p>Phone: {userItem.phone}</p>

@@ -1,12 +1,11 @@
-import './App.css';
-import Cars from './Cars';
+import "./App.css";
+import Users from "./Users";
 
 function App() {
- 
   return (
     <div>
-      <h1>Cars</h1>
-      <Cars />
+      <h1>Users</h1>
+      <Users />
     </div>
   );
 }

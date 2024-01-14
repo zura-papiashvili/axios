@@ -1,9 +1,16 @@
-.card{
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-bottom: 10px; /* Added */
-    border: 1px solid #ccc;
+.card {
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    float: none;
+    border: 1px solid #000000;
     width: 300px;
 
 }
 
+.users {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
